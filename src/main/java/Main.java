@@ -3,6 +3,8 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Set<Integer> set1 = new Set();
+
+        System.out.println("Add: ");
         System.out.println(set1.add(555));
         System.out.println(set1.add(555));
         System.out.println(set1.add(123));
@@ -11,21 +13,30 @@ public class Main {
         System.out.println(set1.add(132));
         System.out.println(set1.add(443));
         System.out.println(set1.add(231));
+        System.out.println("=".repeat(20));
 
-
+        System.out.println("Remove: ");
         System.out.println(set1.remove(123));
         System.out.println(set1.remove(234));
+        System.out.println("=".repeat(20));
 
+        System.out.println("Size: ");
         System.out.println(set1.add(777));
         System.out.println(set1.size());
+        System.out.println("=".repeat(20));
 
+        System.out.println("Is Empty: ");
         System.out.println(set1.isEmpty());
+        System.out.println("=".repeat(20));
 
+        System.out.println("Iterator и вывод всех элементов: ");
         Iterator<Integer> it = set1.iterator();
         while (it.hasNext()){
             System.out.println(it.next());
         }
+        System.out.println("=".repeat(20));
 
+        System.out.println("To String:");
         System.out.println(set1.toStr());
 
     }
