@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Set<Integer> set1 = new Set();
+        HashSetNew<Integer> set1 = new HashSetNew<>();
 
         System.out.println("Add: ");
         System.out.println(set1.add(555));
@@ -38,33 +38,32 @@ public class Main {
 
         System.out.println("To String:");
         System.out.println(set1.toStr());
-
     }
 }
-class Set<E>{
-    private HashMap<E, Object> set = new HashMap<>();
+class HashSetNew<E>{
+    private HashMap<E, Object> hashSet = new HashMap<>();
     private static final Object VALL = new Object();
     public boolean add(E tel) {
-        return set.put(tel, VALL) == null;
+        return hashSet.put(tel, VALL) == null;
     }
 
     public boolean remove(E tel){
-        return set.remove(tel) == VALL;
+        return hashSet.remove(tel) == VALL;
     }
 
     public int size() {
-        return set.size();
+        return hashSet.size();
     }
 
     public boolean isEmpty(){
-       return set.isEmpty();
+       return hashSet.isEmpty();
     }
 
     public Iterator<E> iterator(){
-        return set.keySet().iterator();
+        return hashSet.keySet().iterator();
     }
 
     public String toStr(){
-        return set.keySet().toString().replace("[", "").replace("]", "");
+        return hashSet.keySet().toString().replace("[", "").replace("]", "");
     }
 }
